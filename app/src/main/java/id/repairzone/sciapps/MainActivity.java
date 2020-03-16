@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView iv_list, iv_order, iv_process, iv_recent, iv_add;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void toAddItem(View view){
         Move(AddItem.class);
+    }
+    public void toRecentActivty(View view){
+        Move(Recent.class);
     }
 
     public void Move(Class move){

@@ -8,20 +8,24 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:background="#fcfcfc"
-    android:gravity="center">
+    android:gravity="center"
+    android:layout_margin="5dp"
+    android:weightSum="3">
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:id="@+id/bankcardId"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:onClick="toListActivity"
+            android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -45,9 +49,11 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:onClick="toRequestItem"
+            android:layout_weight="1">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -58,7 +64,8 @@
                     android:layout_height="70dp"
                     android:background="@drawable/circle_shape"
                     android:src="@drawable/stock_order"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:onClick="toRequestItem"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,13 +80,16 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:onClick="toProcessActivity">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -90,7 +100,8 @@
                     android:layout_height="64dp"
                     android:background="@drawable/circle_shape"
                     android:src="@drawable/process"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:onClick="toProcessActivity"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -102,22 +113,23 @@
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:layout_width="160dp"
-            android:layout_height="190dp"
-            android:layout_margin="10dp">
-
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:onClick="toRecentActivty">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle_shape"
                     android:padding="10dp"
-                    android:src="@drawable/ic_recent" />
+                    android:src="@drawable/ic_recent"
+                    android:onClick="toRecentActivty"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -133,13 +145,15 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_weight="1">
         <androidx.cardview.widget.CardView
             android:foreground="?android:attr/selectableItemBackground"
             android:clickable="true"
-            android:layout_width="340dp"
-            android:layout_height="150dp"
-            android:layout_margin="10dp">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:onClick="toAddItem">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -150,7 +164,8 @@
                     android:layout_height="64dp"
                     android:background="@drawable/circle_shape"
                     android:src="@drawable/add"
-                    android:padding="10dp"/>
+                    android:padding="10dp"
+                    android:onClick="toAddItem"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
